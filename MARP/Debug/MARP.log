@@ -1,0 +1,4 @@
+﻿  Ej2.cpp
+c:\users\majo belda\desktop\clase\mar\marp\ej2.cpp(57): warning C4101: 'raiz': variable local sin referencia
+  MARP.vcxproj -> C:\Users\Majo Belda\Desktop\Clase\MAR\MARP\Debug\MARP.exe
+  MARP.vcxproj -> C:\Users\Majo Belda\Desktop\Clase\MAR\MARP\Debug\MARP.pdb (Partial PDB)
