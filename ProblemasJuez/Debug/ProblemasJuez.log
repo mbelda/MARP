@@ -1,3 +1,26 @@
-﻿  19.cpp
-  ProblemasJuez.vcxproj -> C:\Users\Majo\Documents\GitHub\MARP\ProblemasJuez\Debug\ProblemasJuez.exe
-  ProblemasJuez.vcxproj -> C:\Users\Majo\Documents\GitHub\MARP\ProblemasJuez\Debug\ProblemasJuez.pdb (Partial PDB)
+﻿  06.cpp
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(238): error C2039: 'value_type': no es un miembro de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(14): note: vea la declaración de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(238): error C2146: error de sintaxis: falta '>' delante del identificador 'value_type'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(244): error C2039: 'value_type': no es un miembro de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(14): note: vea la declaración de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(15): note: vea la referencia a la creación de instancias de plantilla de clase 'std::priority_queue<paciente,resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>,std::less<int>>' que se está compilando
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(244): error C3646: 'value_type': especificador de invalidación desconocido
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(244): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(245): error C2039: 'size_type': no es un miembro de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(14): note: vea la declaración de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(245): error C3646: 'size_type': especificador de invalidación desconocido
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(245): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(246): error C2039: 'reference': no es un miembro de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(14): note: vea la declaración de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(246): error C3646: 'reference': especificador de invalidación desconocido
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(246): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(247): error C2039: 'const_reference': no es un miembro de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(14): note: vea la declaración de 'resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>'
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(247): error C3646: 'const_reference': especificador de invalidación desconocido
+c:\program files (x86)\microsoft visual studio 14.0\vc\include\queue(247): error C4430: falta el especificador de tipo; se presupone int. Nota: C++ no admite default-int
+c:\users\majo\documents\github\marp\problemasjuez\06.cpp(20): error C2228: el operando izquierdo de '.nombre' debe tener class/struct/union
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(20): note: el tipo es 'int'
+c:\users\majo\documents\github\marp\problemasjuez\06.cpp(26): error C2664: 'void std::priority_queue<paciente,resuelve::<lambda_f76152f10076eec5cf1cdf46b34c68a7>,std::less<int>>::push(const int &)': el argumento 1 no puede convertirse de 'paciente' a 'int &&'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(26): note: Razón: no se puede realizar la conversión de 'paciente' a 'int'
+  c:\users\majo\documents\github\marp\problemasjuez\06.cpp(26): note: No hay disponible ningún operador de conversión definido por el usuario que pueda realizar esta conversión, o bien no se puede llamar al operador

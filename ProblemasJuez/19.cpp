@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-bool hayCasosYResuelve() {
-	long int agujeros, longi;
+bool hayCasos() {
+	int agujeros;
 	cin >> agujeros;
 	if (!cin) return false;
+	int longi;
 	cin >> longi;
 
 	int manguera[10000000];
@@ -30,7 +31,7 @@ bool hayCasosYResuelve() {
 
 int main() {
 
-	while (hayCasosYResuelve()) {}
+	while (hayCasos()) {}
 
 	return 0;
 }

@@ -11,8 +11,7 @@ Arbin<T> leerArbol(T const&	vacio) {
 	return Arbin<T>(a1, raiz, a2);
 }
 
-template <class T>
-bool equilibrado(Arbin<T> const & a) {
+bool equilibrado(Arbin<int> const & a) {
 	if (a.esVacio()) return true;
 
 	int dr = a.hijoDr().altura();
@@ -23,25 +22,75 @@ bool equilibrado(Arbin<T> const & a) {
 	return equilibrado(a.hijoDr()) && equilibrado(a.hijoIz());
 }
 
-template <class T>
-bool ordenado(Arbin<T> const & a, int const & raiz) {
-	bool dr = true, iz = true;
-	if (!a.hijoDr().esVacio()) {
-		if (a.hijoDr().raiz() <= raiz) return false;
-		dr = ordenado(a.hijoDr(), a.hijoDr().raiz());
+int maximo(int const& minDr, int const& minIz, int const& raiz) {
+	if (minDr == -1 && minIz == -1) {
+		return raiz;
 	}
-	if (!a.hijoIz().esVacio()) {
-		if (a.hijoIz().raiz() >= raiz) return false;
-		iz = ordenado(a.hijoIz(), a.hijoIz().raiz());
+	if (minIz == -1 && minDr != -1) {
+		if (minDr > raiz) return minDr;
+		return raiz;
 	}
-	return dr && iz;
+	if (minDr == -1 && minIz != -1) {
+		if (minIz > raiz) return minIz;
+		return raiz;
+	}
+	if (minDr > minIz && minDr > raiz) return minDr;
+	if (minIz > minDr && minIz > raiz) return minIz;
+	return raiz;
 }
 
-template <class T>
-bool AVL(Arbin<T> const & a) {
-	if (a.esVacio()) return true;
-	
+int max(Arbin<int> const & a) {
+	if (a.esVacio()) return -1;
+	int minDr = max(a.hijoDr());
+	int minIz = max(a.hijoIz());
+	return maximo(minDr, minIz, a.raiz());
+}
 
+int minimo(int const& minDr, int const& minIz, int const& raiz) {
+	if (minDr == -1 && minIz == -1) {
+		return raiz;
+	}
+	if (minIz == -1 && minDr != -1) {
+		if (minDr < raiz) return minDr;
+		return raiz;
+	}
+	if (minDr == -1 && minIz != -1) {
+		if (minIz < raiz) return minIz;
+		return raiz;
+	}
+	if (minDr < minIz && minDr < raiz) return minDr;
+	if (minIz < minDr && minIz < raiz) return minIz;
+	return raiz;
+}
+
+int min(Arbin<int> const & a) {
+	if (a.esVacio()) return -1;
+	int minDr = min(a.hijoDr());
+	int minIz = min(a.hijoIz());
+	return minimo(minDr, minIz, a.raiz());
+}
+
+bool ordenado(Arbin<int> const & a) {
+	
+	if (a.esVacio()) return true;
+
+	if (!a.hijoDr().esVacio()) {
+		int minDr = min(a.hijoDr());
+		if (minDr != -1 && minDr < a.raiz()) return false;
+	}
+
+	if (!a.hijoIz().esVacio()) {
+		int maxIz = max(a.hijoIz());
+		if (maxIz > a.raiz()) return false;
+	}
+
+	return ordenado(a.hijoDr()) && ordenado(a.hijoIz());
+}
+
+bool AVL(Arbin<int> const & a) {
+	if (a.esVacio()) return true;
+	if (ordenado(a) && equilibrado(a)) return true;
+	return false;
 }
 
 int main() {
@@ -51,11 +100,8 @@ int main() {
 
 	for (int i = 0; i < ncasos; i++) {
 		a = leerArbol(-1);
-		try {
-			if (AVL(a)) cout << "SI";
-			else cout << "NO";
-		}
-		catch (domain_error e) {}
+		if (AVL(a)) cout << "SI";
+		else cout << "NO";
 		cout << endl;
 	}
 	return 0;
