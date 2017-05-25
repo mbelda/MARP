@@ -22,7 +22,7 @@
     <ClInclude Include="Arbin.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="06.cpp" />
+    <ClCompile Include="27Varillas.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D48053F6-2B76-4067-8C6C-69904EBDA65B}</ProjectGuid>
